@@ -88,9 +88,9 @@ function cmpases($a,$b){
 	return $b["ases"]-$a["ases"];
 }
 
-$js1=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdbv2backup/ix.my");
-$js2=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdbv2backup/netixlan.my");
-$js3=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdbv2backup/asn.my");
+$js1=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdb2/ix.my");
+$js2=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdb2/netixlan.my");
+$js3=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdb2/asn.my");
 $arr1=json_decode($js1,TRUE);
 $arr2=json_decode($js2,TRUE);
 $arr3=json_decode($js3,TRUE);
@@ -98,8 +98,6 @@ $arr3=json_decode($js3,TRUE);
 $out1=mylist("IT");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-it.html");
-
-return;
 
 $out1=mylist("DE");
 usort($out1,"cmpases");
