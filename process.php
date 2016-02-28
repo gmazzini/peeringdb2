@@ -33,7 +33,7 @@ function mylist($mycountry){
 				$j=0;
 				$asnname="";
 				foreach ($asn as $key3 => $elm3){
-					foreach ($arr3 as $elm4){
+					foreach ($arr3["data"] as $elm4){
 						if($elm4["asn"]==$key3){
 							$asnname=$elm4["name"];
 							break;
