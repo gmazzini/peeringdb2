@@ -99,6 +99,8 @@ $out1=mylist("IT");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-it.html");
 
+return;
+
 $out1=mylist("DE");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-de.html");
