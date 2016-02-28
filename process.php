@@ -1,6 +1,6 @@
 <?php
 
-// drop port with capacity over 10Tbps and less of 100Mbps (problem with IX Ausralia)
+// drop port with capacity over 10Tbps and less of 100Mbps
 
 function mylist($mycountry){
 	global $arr1,$arr2;
@@ -36,6 +36,9 @@ function mylist($mycountry){
 					$topvasn+=$elm3;
 					if(++$j>9)break;
 				}
+				$res[$i]["topasn"]=$topasn;
+				$res[$i]["topvasn"]=$topvasn;
+                		$i++;
 			}
 		}
 	}
