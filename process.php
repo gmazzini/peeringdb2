@@ -3,7 +3,7 @@
 // drop port with capacity over 10Tbps and less of 100Mbps
 
 function mylist($mycountry){
-	global $arr1,$arr2;
+	global $arr1,$arr2,$arr3;
 	unset($res);
 	$i=0;
 	foreach ($arr1["data"] as $elm1){
@@ -31,8 +31,15 @@ function mylist($mycountry){
 				$topasn="";
 				$topvasn=0;
 				$j=0;
+				$asnname="";
 				foreach ($asn as $key3 => $elm3){
-					$topasn.=$key3." ";
+					foreach ($arr3 as $elm4){
+						if($elm4["asn"]==$key3){
+							$asnname=$elm4["name"];
+							break;
+						}
+					}
+					$topasn.=$key3."(".$asnname.")"." ";
 					$topvasn+=$elm3;
 					if(++$j>9)break;
 				}
