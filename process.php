@@ -7,13 +7,13 @@ function mylist($mycountry){
 	unset($res);
 	$i=0;
 	foreach ($arr1["data"] as $elm1){
-		if($mycountry=="all" || $elm1["country"]==$mycountry){
+		if($elm1["status"]=="ok" && ($mycountry=="all" || $elm1["country"]==$mycountry)){
 			$cap4=0;
 			$cap6=0;
 			unset($asn);
 			$asn=array();
 			foreach ($arr2["data"] as $elm2){
-				if($elm1["id"]==$elm2["ixlan_id"] && $elm2["speed"]<10000000 && $elm2["speed"]>=100){
+				if($elm2["status"]=="ok" && $elm1["id"]==$elm2["ixlan_id"] && $elm2["speed"]<10000000 && $elm2["speed"]>=100){
 					if(!empty($elm2["ipaddr4"]))$cap4+=$elm2["speed"];
 					if(!empty($elm2["ipaddr6"]))$cap6+=$elm2["speed"];
 					if(empty($asn[$elm2["asn"]]))$asn[$elm2["asn"]]=$elm2["speed"];
@@ -31,10 +31,10 @@ function mylist($mycountry){
 				$topasn="";
 				$topvasn=0;
 				$j=0;
-				$asnname="";
 				foreach ($asn as $key3 => $elm3){
+					$asnname="";
 					foreach ($arr3["data"] as $elm4){
-						if($elm4["asn"]==$key3){
+						if($elm4["status"]=="ok" && $elm4["asn"]==$key3){
 							$asnname=$elm4["name"];
 							break;
 						}
