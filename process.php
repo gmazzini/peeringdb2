@@ -75,7 +75,7 @@ function outtable($res,$filename){
 		$i++;
 	}
 	fprintf($myfile,"</TABLE>");
-	fclose($myfile);
+	fclose($myfile);;
 }
 
 function cmpv4($a,$b){
