@@ -91,7 +91,7 @@ function cmpases($a,$b){
 
 $js1=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdb2/ix.my");
 $js2=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdb2/netixlan.my");
-$js3=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdb2/asn.my");
+$js3=file_get_contents("/home/www/peeringdb.mazzini.org/peeringdb2/net.my");
 $arr1=json_decode($js1,TRUE);
 $arr2=json_decode($js2,TRUE);
 $arr3=json_decode($js3,TRUE);
