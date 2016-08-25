@@ -45,7 +45,7 @@ function mylist($mycountry){
 				}
 				$res[$i]["topasn"]=$topasn;
 				$res[$i]["topvasn"]=$topvasn;
-                		$i++;
+				$i++;
 			}
 		}
 	}
@@ -69,10 +69,10 @@ function outtable($res,$filename){
 		fprintf($myfile,"<TD>%s</TD>",number_format($elm3["v6capacity"]));
 		fprintf($myfile,"<TD>%s</TD>",$elm3["topasn"]);
 		fprintf($myfile,"<TD>%s</TD>",number_format($elm3["topvasn"]));
-                fprintf($myfile,"<TD>%s</TD>",$elm3["city"]);
-                fprintf($myfile,"<TD>%s</TD>",$elm3["country"]);
-                fprintf($myfile,"</TR>\n");
-                $i++;
+		fprintf($myfile,"<TD>%s</TD>",$elm3["city"]);
+		fprintf($myfile,"<TD>%s</TD>",$elm3["country"]);
+		fprintf($myfile,"</TR>\n");
+		$i++;
 	}
 	fprintf($myfile,"</TABLE>");
 	fclose($myfile);
@@ -81,9 +81,11 @@ function outtable($res,$filename){
 function cmpv4($a,$b){
 	return $b["v4capacity"]-$a["v4capacity"];
 }
+
 function cmpv6($a,$b){
 	return $b["v6capacity"]-$a["v6capacity"];
 }
+
 function cmpases($a,$b){
 	return $b["ases"]-$a["ases"];
 }
