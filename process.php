@@ -12,7 +12,7 @@ function mylist($mycountry){
       unset($asn);
       $asn=array();
       foreach ($arr2["data"] as $elm2){
-        if($elm2["status"]=="ok" && $elm1["id"]==$elm2["ixlan_id"] && $elm2["speed"]<10000000 && $elm2["speed"]>=100){
+        if($elm2["status"]=="ok" && $elm1["id"]==$elm2["ix_id"] && $elm2["speed"]<10000000 && $elm2["speed"]>=100){
           if(!empty($elm2["ipaddr4"]))$cap4+=$elm2["speed"];
           if(!empty($elm2["ipaddr6"]))$cap6+=$elm2["speed"];
           if(empty($asn[$elm2["asn"]]))$asn[$elm2["asn"]]=$elm2["speed"];
