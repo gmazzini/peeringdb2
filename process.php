@@ -120,6 +120,34 @@ $out1=mylist("GB","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-gb.html");
 
+$out1=mylist("","Asia Pacific");
+usort($out1,"cmpases");
+outtable($out1,"/home/www/peeringdb.mazzini.org/customers-AP.html");
+
+$out1=mylist("","Europe");
+usort($out1,"cmpases");
+outtable($out1,"/home/www/peeringdb.mazzini.org/customers-EU.html");
+
+$out1=mylist("","South America");
+usort($out1,"cmpases");
+outtable($out1,"/home/www/peeringdb.mazzini.org/customers-SA.html");
+
+$out1=mylist("","North America");
+usort($out1,"cmpases");
+outtable($out1,"/home/www/peeringdb.mazzini.org/customers-NA.html");
+
+$out1=mylist("","Africa");
+usort($out1,"cmpases");
+outtable($out1,"/home/www/peeringdb.mazzini.org/customers-AF.html");
+
+$out1=mylist("","Middle East");
+usort($out1,"cmpases");
+outtable($out1,"/home/www/peeringdb.mazzini.org/customers-ME.html");
+
+$out1=mylist("","Australia");
+usort($out1,"cmpases");
+outtable($out1,"/home/www/peeringdb.mazzini.org/customers-AU.html");
+
 $out1=mylist("all","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers.html");
