@@ -1,12 +1,12 @@
 <?php
 
 // drop port with capacity over 10Tbps and less of 100Mbps
-function mylist($mycountry){
+function mylist($mycountry,$mycontinent){
   global $arr1,$arr2,$arr3;
   unset($res);
   $i=0;
   foreach ($arr1["data"] as $elm1){
-    if($elm1["status"]=="ok" && ($mycountry=="all" || $elm1["country"]==$mycountry)){
+    if($elm1["status"]=="ok" && (($mycontinent=="" && ($mycountry=="all" || $elm1["country"]==$mycountry)) || ($mycontinent!="" && $mycontinent==$elm1["region_continent"]))){
       $cap4=0;
       $cap6=0;
       unset($asn);
@@ -96,31 +96,31 @@ $arr1=json_decode($js1,TRUE);
 $arr2=json_decode($js2,TRUE);
 $arr3=json_decode($js3,TRUE);
 
-$out1=mylist("IT");
+$out1=mylist("IT","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-it.html");
 
-$out1=mylist("DE");
+$out1=mylist("DE","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-de.html");
 
-$out1=mylist("NL");
+$out1=mylist("NL","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-nl.html");
 
-$out1=mylist("FR");
+$out1=mylist("FR","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-fr.html");
 
-$out1=mylist("US");
+$out1=mylist("US","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-us.html");
 
-$out1=mylist("GB");
+$out1=mylist("GB","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers-gb.html");
 
-$out1=mylist("all");
+$out1=mylist("all","");
 usort($out1,"cmpases");
 outtable($out1,"/home/www/peeringdb.mazzini.org/customers.html");
 usort($out1,"cmpv4");
