@@ -21,7 +21,7 @@ we are not responsible for the correctness, completeness or up-to-dateness of da
 <a href="customers-fr.html">Rank by customers only FR</a><br>
 <a href="customers-it.html">Rank by customers only IT</a><br><br>
   
-<a href="customers-AP.html">Rank by customers only Asia Pacific"</a><br>
+<a href="customers-AP.html">Rank by customers only Asia Pacific</a><br>
 <a href="customers-EU.html">Rank by customers only Europe</a><br>
 <a href="customers-SA.html">Rank by customers only South America</a><br>
 <a href="customers-NA.html">Rank by customers only North America</a><br>
